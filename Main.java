@@ -1,6 +1,6 @@
-// YOUR NAME:
+// YOUR NAME: Jonathan Smith
 // COLLABORATORS:
-// LAST MODIFIED DATE: 
+// LAST MODIFIED DATE: 4/1/2026
 /*
 Yearly Global Atmospheric CO₂ Levels (parts per million)
 2001: 371.32 ppm
@@ -33,22 +33,58 @@ class Main
   public static void main(String[] args) 
   {
 		// DECLARATION SECTION
+    int [] years;
 
+
+   
+   
+    
+    
 		// INITIALIZATION SECTION
+    double[] co2Levels = {371.32, 373.45, 375.98, 377.70, 379.98, 382.09, 384.03, 385.83, 387.64, 390.10, 391.85, 
+    394.06, 396.74, 398.87, 401.01, 404.41, 406.76, 408.72, 411.66, 414.24};
+     
+     
+    years = new int [20];
+    int currentYear = 2001;
+    years [0]= currentYear;
+    for(int i = 0; i < currentYear; i++ );
+    int 
+    {
+
+    }
+    printBar(double value);
 
 		// INPUT SECTION 
 
+
+
 		// PROCESSING SECTION
+
+
 
 		// OUTPUT SECTION
   
+
+
     //Explanation of oil drum units
     System.out.println("\nData displayed for each year begins at 360 ppm.\nEach additional oil drum (🛢 ) represents an additional 10 ppm.\n");
+
+
 
     //Column titles of graph
     System.out.print("Year");
     UtilityBelt.printCentered(55,"CO₂ in Atmosphere (ppm)");
+    
 
   }
 
+  public static void printBar(double co2Values){
+  int numDrums = (int) ((co2Value - 360)/ 10); 
+  }
+
+
+  public static void printGraph( ) {
+    
+  }
 }
