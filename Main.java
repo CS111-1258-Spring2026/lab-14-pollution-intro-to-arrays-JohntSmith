@@ -48,11 +48,12 @@ class Main
 
 
     //Column titles of graph
-    System.out.print("Year");
+    //System.out.print("Year");
     //System.out.println("CO2 in Atmosphere (ppm)");
-    UtilityBelt.printCentered(50,"CO₂ in Atmosphere (ppm)");
-    System.out.println();
-
+    //UtilityBelt.printCentered(50,"CO₂ in Atmosphere (ppm)");
+    //System.out.println();
+    System.out.println("Year                CO₂ in Atmosphere (ppm)                ");
+    
     printGraph(co2Levels, years);
 
    
