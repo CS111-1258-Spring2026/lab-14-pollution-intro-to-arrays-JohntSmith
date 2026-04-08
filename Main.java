@@ -1,28 +1,8 @@
 // YOUR NAME: Jonathan Smith
 // COLLABORATORS:
-// LAST MODIFIED DATE: 4/1/2026
+// LAST MODIFIED DATE: 4/8/2026
 /*
 Yearly Global Atmospheric CO₂ Levels (parts per million)
-2001: 371.32 ppm
-2002: 373.45 ppm
-2003: 375.98 ppm
-2004: 377.70 ppm
-2005: 379.98 ppm
-2006: 382.09 ppm
-2007: 384.03 ppm
-2008: 385.83 ppm
-2009: 387.64 ppm
-2010: 390.10 ppm
-2011: 391.85 ppm
-2012: 394.06 ppm
-2013: 396.74 ppm
-2014: 398.87 ppm
-2015: 401.01 ppm
-2016: 404.41 ppm
-2017: 406.76 ppm
-2018: 408.72 ppm
-2019: 411.66 ppm
-2020: 414.24 ppm
 (Data from: https://www.esrl.noaa.gov/gmd/webdata/ccgg/trends/co2/co2_annmean_mlo.txt)
 */
 
@@ -34,33 +14,28 @@ class Main
   {
 		// DECLARATION SECTION
     int [] years;
-
+    double [] co2Levels;
 
    
-   
-    
-    
-		// INITIALIZATION SECTION
-    double[] co2Levels = {371.32, 373.45, 375.98, 377.70, 379.98, 382.09, 384.03, 385.83, 387.64, 390.10, 391.85, 
+   // INITIALIZATION SECTION
+    co2Levels = new double[] {371.32, 373.45, 375.98, 377.70, 379.98, 382.09, 384.03, 385.83, 387.64, 390.10, 391.85, 
     394.06, 396.74, 398.87, 401.01, 404.41, 406.76, 408.72, 411.66, 414.24};
      
      
-    years = new int [20];
+    years = new int[20];
     int currentYear = 2001;
-    years [0]= currentYear;
-    for(int i = 0; i < currentYear; i++ );
-    int 
-    {
-
+    years [0] = currentYear;
+    for(int i = 0; i < years.length; i++){
+      years[i] = currentYear;
+      currentYear++;
     }
-    printBar(double value);
 
 		// INPUT SECTION 
 
 
 
 		// PROCESSING SECTION
-
+    double growth = co2Levels[co2Levels.length - 1]-co2Levels[0];
 
 
 		// OUTPUT SECTION
@@ -74,17 +49,32 @@ class Main
 
     //Column titles of graph
     System.out.print("Year");
-    UtilityBelt.printCentered(55,"CO₂ in Atmosphere (ppm)");
+    //System.out.println("CO2 in Atmosphere (ppm)");
+    UtilityBelt.printCentered(50,"CO₂ in Atmosphere (ppm)");
+    System.out.println();
+
+    printGraph(co2Levels, years);
+
+   
+    System.out.println("From 2001 to 2020, the average atmospheric CO₂ levels across the globe has grown " + String.format("%.2f", growth) + " ppm.");
     
 
   }
 
-  public static void printBar(double co2Values){
-  int numDrums = (int) ((co2Value - 360)/ 10); 
+  public static void printBar(double co2Value){
+  int numDrums = (int) (co2Value - 360) ; 
+  for (int i = 0; i < numDrums; i++){
+    System.out.print ("🛢");
+   }
+   System.out.printf(" %.2f\n", co2Value);
   }
 
 
-  public static void printGraph( ) {
+  public static void printGraph(double[] data, int[] years) {
+    for (int i= 0; i < data.length; i++){
+      System.out.print( years[i] + " ");
+      printBar(data[i]);
+    }
     
   }
 }
